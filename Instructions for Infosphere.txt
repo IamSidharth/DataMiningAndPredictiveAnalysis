@@ -1,0 +1,47 @@
+Not perfect Steps for InfoSphere Design Studio:s
+
+01. Double click on Design Studio on the desktop
+02. Create your own workspace
+03. Close the Welcome page
+04. Right click on the Data source explorer window, click New
+05. Select DB2 for Linux, Unix and Windows
+06. Database name: GSDBCB1
+07. Username: cceb1
+08. Password: student
+09. Host IP: 172.16.53.26
+10. Set JDBC Driver to IBM Data Server...4.0 Default
+11. Click Finish
+12. Expand the Database Window --> Schema
+13. Open a database table
+14. Right click on select Data --> Sample contents to view contents
+15. Click on File --> New --> Data warehousing project
+16. Enter a name for the project
+17. Create a physical model by right clicking on Data Model --> New physical data model
+18. Set version as 9.7
+19. Select 'Create from reverse engineering'
+20. Click Next
+21. Select Database
+22. Click Next
+23. Select GSDBCB1
+24. Click Next
+25. Select a schema ('GOSALES')
+26. Click Finish
+27. Close the *.dbm window
+28. Expand the Model by double clicking
+29. Right click GSDBCB1 and create a new schema with a unique name
+30. Right click on the schema and add Data Object --> Table for BRANCH
+30.1. Go to Properties and rename the table
+30.2. Change the Data type and select Primary Key for an attribute
+31. Import some attributes from the Data Source Explorer ('BRANCH_CODE, ...')
+32. Select and right click them, select copy
+33. Paste them in the table you created
+34. Create another table  by following Step 30 for COUNTRY
+35. Make the COUNTRY_CODE in BRANCH a Foreign Key by Add Data Object --> Foreign Key
+36. Under Properties --> Details, Select Unique Constraint or index, choose use the Existing...
+37. Under Properties --> Details--> KEY_COLUMNS and tick COUNTRY_CODE
+38. A FOREIGN_KEY should appear in the table
+39. Right click on the Schema--> Generate DDL --> Select Fully Qualified Names --> Next --> Select Run DDL on Server --> Next --> Select the connections GSDBCB1 -->Finsh
+40. Success
+41. Refresh the Database
+42. Open the Schema in the Server
+43. View sample contents as done in Step 14 (Should be empty cause we haven't loaded any data)
